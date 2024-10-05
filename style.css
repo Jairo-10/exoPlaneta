@@ -21,7 +21,7 @@ header {
     left: 0; /* Comenzar desde la izquierda */
     right: 0; /* Terminar en la derecha */
     width: 100%; /* Asegurar que ocupe todo el ancho */
-    background: rgba(26, 26, 26, 0.9); /* Fondo semitransparente */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
     color: #ffffff;
     padding: 0px;
     text-align: center;
