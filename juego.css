@@ -50,3 +50,31 @@ button:hover{
     padding: 8px 20px;
     box-sizing: border-box;
 }
+
+.botones-container {
+    display: flex; /* Usar flexbox */
+    justify-content: center; /* Centrar los botones */
+    margin-top: 10px; /* Espacio superior */
+}
+
+button#reiniciar, button#salir {
+    width: 45%; /* Ancho de los botones */
+    height: 50px; /* Ajustar la altura */
+    padding: 0; /* Eliminar padding para controlar mejor la altura */
+    font-size: 18px;
+    margin: 0 5px; /* Espacio horizontal entre botones */
+    color: white;
+    background-color: rgba(9, 9, 121, 0.8); /* Color de fondo */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+button#reiniciar:hover, button#salir:hover {
+    background-color: rgba(0, 212, 255, 0.8); /* Color de fondo al pasar el mouse */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+img{
+    width: 110%;
+}

@@ -11,6 +11,12 @@ let timer = 30;
 let timerInicial = 30;
 let tiempoRegresivoId = null;
 
+let clickAudio = new Audio('./aud/click.wav');
+let aciertaAudio = new Audio('./aud/acierta.wav');
+let fallaAudio = new Audio('./aud/falla.wav');
+let gamaAudio = new Audio('./aud/gama.wav');
+let pierdeAudio = new Audio('./aud/pierde.wav');
+
 //apuntamiento de documento HTML
 let mostrarMovimientos = document.getElementById('movimientos');
 let mostrarAciertos = document.getElementById('aciertos');
@@ -26,17 +32,52 @@ function contarTiempo(){
     tiempoRegresivoId = setInterval(()=>{
         timer--;
         mostrarTiempo.innerHTML = `Tiempo: ${timer} segundos`;
-        if(timer == 0){
+        if(timer < 0){
             clearInterval(tiempoRegresivoId);
-            bloquearTarjetas();
+            bloquearTarjetas(numeros);
+            pierdeAudio.play();
         }
     },1000)
+}
+
+// Función para reiniciar el juego
+function reiniciarJuego() {
+    // Reiniciar variables
+    tarjetasDestapadas = 0;
+    tarjeta1 = null;
+    tarjeta2 = null;
+    primerResultado = null;
+    segundoResultado = null;
+    movimientos = 0;
+    aciertos = 0;
+    timer = timerInicial;
+
+    // Actualizar estadísticas en el DOM
+    mostrarMovimientos.innerHTML = `Movimientos: ${movimientos}`;
+    mostrarAciertos.innerHTML = `Aciertos: ${aciertos}`;
+    mostrarTiempo.innerHTML = `Tiempo: ${timer} segundos`;
+
+    // Reiniciar botones
+    for(let i = 0; i <= 15; i++) {
+        let tarjetaBloqueada = document.getElementById(i);
+        tarjetaBloqueada.innerHTML = '';
+        tarjetaBloqueada.disabled = false;
+    }
+
+    // Reiniciar temporizador
+    clearInterval(tiempoRegresivoId);
+    temporizador = false;
+}
+
+// Función para salir
+function salir() {
+    window.location.href = "principal.html"; // Cambia esto por la URL de tu página inicial
 }
 
 function bloquearTarjetas(){
     for(let i = 0; i<= 15; i++){
         let tarjetaBloqueada = document.getElementById(i);
-        tarjetaBloqueada.innerHTML = numeros[i];
+        tarjetaBloqueada.innerHTML = `<img src="./img/${numeros[i]}.png" alt="">`;
         tarjetaBloqueada.disabled = true;
     }
 }
@@ -56,7 +97,8 @@ function destapar(id){
         //mostrar el primer numero
         tarjeta1 = document.getElementById(id);
         primerResultado = numeros[id];
-        tarjeta1.innerHTML = primerResultado;
+        tarjeta1.innerHTML = `<img src="./img/${primerResultado}.png" alt="">`;
+        clickAudio.play();
 
         //deshabilitar primer boton
         tarjeta1.disabled = true;
@@ -64,7 +106,7 @@ function destapar(id){
         //mostrar segundo numero
         tarjeta2 = document.getElementById(id);
         segundoResultado = numeros[id];
-        tarjeta2.innerHTML = segundoResultado;
+        tarjeta2.innerHTML = `<img src="./img/${segundoResultado}.png" alt="">`;
 
         //deshabilitar segundo boton
         tarjeta2.disabled = true;
@@ -80,8 +122,9 @@ function destapar(id){
             //aumentar aciertos
             aciertos++;
             mostrarAciertos.innerHTML = `Aciertos: ${aciertos}`;
-
+            aciertaAudio.play();
             if(aciertos == 8){
+                gamaAudio.play();
                 clearInterval(tiempoRegresivoId)
                 mostrarAciertos.innerHTML = `Aciertos: ${aciertos} 🙃`;
                 mostrarTiempo.innerHTML = `Fantastico! 🥳 solo demoraste ${timerInicial - timer} segundos`;
@@ -90,6 +133,7 @@ function destapar(id){
 
         }else{
             //mostrar momentariamente valores y volver a tapar
+            fallaAudio.play();
             setTimeout(()=>{
                 tarjeta1.innerHTML = ' ';
                 tarjeta2.innerHTML = ' ';
