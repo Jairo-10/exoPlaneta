@@ -52,3 +52,126 @@ body {
     height: 600px; /* Altura del iframe */
     border: none; /* Sin borde alrededor del iframe */
 }
+
+
+/* BALLS/* Contenedor de las bolas */
+.ia-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de planetas superpuestos */
+.ball {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background-size: cover;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: transform 1s ease;
+}
+
+/* Planetas superpuestos en el mismo lugar */
+.ball1 {
+    background: radial-gradient(circle at 30% 30%, #ff6347, #8b0000); /* Planeta rojizo */
+}
+
+.ball2 {
+    background: radial-gradient(circle at 50% 50%, #1e90ff, #00008b); /* Planeta azul */
+    transform: translate(10px, 10px); /* Ligeramente desplazado */
+}
+
+.ball3 {
+    background: radial-gradient(circle at 50% 50%, #32cd32, #006400); /* Planeta verde */
+    transform: translate(-10px, -10px); /* Ligeramente desplazado */
+}
+
+/* Efecto de vibración al hacer clic (simula que está hablando) */
+@keyframes vibrate {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(2px, -2px);
+    }
+    50% {
+        transform: translate(-2px, 2px);
+    }
+    75% {
+        transform: translate(2px, 2px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes vibrate2 {
+    0% {
+        transform: translate(10, 10);
+    }
+    25% {
+        transform: translate(2px, -2px);
+    }
+    50% {
+        transform: translate(-2px, 2px);
+    }
+    75% {
+        transform: translate(2px, 2px);
+    }
+    100% {
+        transform: translate(10, 10);
+    }
+}
+
+@keyframes vibrate3 {
+    0% {
+        transform: translate(-10, -10);
+    }
+    25% {
+        transform: translate(2px, -2px);
+    }
+    50% {
+        transform: translate(-2px, 2px);
+    }
+    75% {
+        transform: translate(2px, 2px);
+    }
+    100% {
+        transform: translate(-10, -10);
+    }
+}
+/* Cuando se activa, las bolas comienzan a vibrar */
+/* .active .ball {
+    animation: vibrate 0.5s infinite;
+} */
+
+/* Añadir rotación opcional para los planetas */
+@keyframes rotatePlanet {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.active .ball1 {
+    transition: transform 0.3s ;
+    animation: vibrate 0.5s infinite;
+}
+
+.active .ball2 {
+    animation: vibrate2 0.7s infinite;
+}
+
+.active .ball3 {
+    animation: vibrate3 0.7s infinite;
+}
