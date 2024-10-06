@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Asegúrate de que el html y el body ocupen toda la altura */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.imagen-portada-container {
+    position: relative; /* Permite que los elementos hijos se posicionen relativos a este contenedor */
+}
+
+.imagen-portada {
+    width: 100%; /* Ocupa el 100% del ancho del contenedor principal */
+    max-height: 100vh; /* Limitar la altura de la imagen a la altura del viewport */
+    object-fit: cover; /* Asegura que la imagen no se distorsione */
+    display: block; /* Mostrar como un bloque */
+    animation: fadeIn 1.5s ease-in-out; /* Animación suave al cargar la imagen */
+}
+
+/* Animación para la imagen */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
