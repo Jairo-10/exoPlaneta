@@ -7,6 +7,18 @@
     <title>Crónicas de los Exoplanetas</title>
     <link rel="stylesheet" href="principal.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        /* Efecto de levitación */
+        .modal {
+            animation: levitate 1s ease-in-out infinite alternate;
+        }
+        
+        @keyframes levitate {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+    </style>
 </head>
 
 <body>
@@ -15,7 +27,7 @@
         <img src="img/Fondo.png" alt="Imagen de presentación de exoplanetas" class="imagen-portada">
     </div>
 
-    <section class="contenido bg-gray-100 py-5 px-6 sm:px-12 lg:px-24 flex flex-col items-center relative">
+    <section class="contenido border-0 py-5 px-6 sm:px-12 lg:px-24 flex flex-col items-center relative">
         <!-- Contenido sobre los exoplanetas -->
         <h2 class="relative text-4xl sm:text-5xl font-bold text-center text-indigo-700 mb-6 z-10">
             EXOPLANETAS
@@ -40,9 +52,9 @@
             <div class="flex flex-row w-full gap-4 mb-4">
                 <div
                     class="w-1/2 bg-slate-50 border border-zinc-400 shadow-lg rounded-lg p-1 hover:scale-95 transition-transform duration-300">
-                    <a href="tGigantes.html">
+                    <span id="openModal">
                         <img src="img/Gigantes Gaseosos.png" alt="tGigantes">
-                    </a>
+                    </span>
                 </div>
                 <div
                     class="w-1/2 bg-slate-50 border border-zinc-400 shadow-lg rounded-lg p-1 hover:scale-95 transition-transform duration-300">
@@ -65,6 +77,76 @@
                         <img src="img/Terrestres.png" alt="tTerrestres">
                     </a>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div id="planetModal"
+        class="flex flex-row fixed inset-0 z-50 hidden justify-center items-center bg-black bg-opacity-75 text-slate-200">
+        <div class="rounded-lg shadow-lg p-6 max-w-2xl modal">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-bold color-white">Gigantes Gaseosos</h2>
+                <button id="closeModal" class="text-gray-600 hover:text-gray-900">&times;</button>
+            </div>
+            <div id="carousel" class="relative">
+                <div class="carousel-images gap-4">
+                    <div class="carousel-item  grid grid-cols-2">
+                        <div>
+                            <h1>HD 189733b</h1>
+                            <div class="">
+                                Distancia a la Tierra: 64 años luz.
+Características: Es conocido por sus intensas tormentas, con vientos de hasta 8,700 km/h. Tiene un color azul intenso debido a la presencia de silicato en su atmósfera, lo que probablemente crea lluvias de vidrio.
+                            </div>
+                        </div>
+                        <img src="./img/Gaseosos/HD 189733b.png" alt="Planeta 1" class="w-full rounded-lg">
+                    </div>
+                    <div class="carousel-item hidden grid grid-cols-2">
+                        <div>
+                            <h1>51 PEGASI B</h1>
+                            <div class="">
+                                Distancia a la Tierra: 64 años luz.
+Características: Es conocido por sus intensas tormentas, con vientos de hasta 8,700 km/h. Tiene un color azul intenso debido a la presencia de silicato en su atmósfera, lo que probablemente crea lluvias de vidrio.
+                            </div>
+                        </div>
+                        <img src="./img/Gaseosos/51 Pegasi b.png" alt="Planeta 1" class="w-full rounded-lg">
+                    </div>
+                    <div class="carousel-item hidden grid grid-cols-2">
+                        <div>
+                            <h1>KEPLER-7b (Osiris)</h1>
+                            <div class="">
+                                Distancia a la Tierra: 64 años luz.
+Características: Es conocido por sus intensas tormentas, con vientos de hasta 8,700 km/h. Tiene un color azul intenso debido a la presencia de silicato en su atmósfera, lo que probablemente crea lluvias de vidrio.
+                            </div>
+                        </div>
+                        <img src="./img/Gaseosos/Kepler-7b.png" alt="Planeta 1" class="w-full rounded-lg">
+                    </div>
+                    <div class="carousel-item hidden grid grid-cols-2">
+                        <div>
+                            <h1>WASP-12b</h1>
+                            <div class="">
+                                Distancia a la Tierra: 64 años luz.
+Características: Es conocido por sus intensas tormentas, con vientos de hasta 8,700 km/h. Tiene un color azul intenso debido a la presencia de silicato en su atmósfera, lo que probablemente crea lluvias de vidrio.
+                            </div>
+                        </div>
+                        <img src="./img/Gaseosos/WASP-12b.png" alt="Planeta 1" class="w-full rounded-lg">
+                    </div>
+                    <div class="carousel-item hidden grid grid-cols-2">
+                        <div>
+                            <h1>HD 209458b (Osiris)</h1>
+                            <div class="">
+                                Distancia a la Tierra: 64 años luz.
+Características: Es conocido por sus intensas tormentas, con vientos de hasta 8,700 km/h. Tiene un color azul intenso debido a la presencia de silicato en su atmósfera, lo que probablemente crea lluvias de vidrio.
+                            </div>
+                        </div>
+                        <img src="./img/Gaseosos/HD 209458b (Osiris).png" alt="Planeta 1" class="w-full rounded-lg">
+                    </div>
+                </div>
+                <button id="prev" class="absolute left-0 bottom-1 transform -translate-y-1/2 mr-5">
+                    <img src="./img/nave-espacial.png" alt="Anterior"
+                        class="w-10 h-10 transform scale-x-[-1] object-cover">
+                </button>
+                <button id="next" class="absolute right-0 bottom-1 transform -translate-y-1/2 ml-5">
+                    <img src="./img/nave-espacial.png" alt="Siguiente" class="w-10 h-10">
+                </button>
             </div>
         </div>
     </div>
@@ -95,6 +177,31 @@
         this.classList.toggle('active');
     });
 
+    const openModal = document.getElementById("openModal");
+    const closeModal = document.getElementById("closeModal");
+    const modal = document.getElementById("planetModal");
+    const carouselItems = document.querySelectorAll(".carousel-item");
+    let currentIndex = 0;
+
+    openModal.addEventListener("click", () => {
+        modal.classList.remove("hidden");
+    });
+
+    closeModal.addEventListener("click", () => {
+        modal.classList.add("hidden");
+    });
+
+    document.getElementById("prev").addEventListener("click", () => {
+        carouselItems[currentIndex].classList.add("hidden");
+        currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+        carouselItems[currentIndex].classList.remove("hidden");
+    });
+
+    document.getElementById("next").addEventListener("click", () => {
+        carouselItems[currentIndex].classList.add("hidden");
+        currentIndex = (currentIndex + 1) % carouselItems.length;
+        carouselItems[currentIndex].classList.remove("hidden");
+    });
 </script>
 
 </html>
