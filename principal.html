@@ -13,10 +13,15 @@
         .modal {
             animation: levitate 1s ease-in-out infinite alternate;
         }
-        
+
         @keyframes levitate {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-10px); }
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-10px);
+            }
         }
     </style>
 </head>
@@ -45,7 +50,7 @@
     </section>
 
 
-
+    <div></div>
     <div class="flex flex-row w-full justify-center py-700">
         <div class="flex flex-col h-fit w-3/4 max-w-4xl px-4">
             <!-- Primera fila de cards -->
@@ -58,28 +63,29 @@
                 </div>
                 <div
                     class="w-1/2 bg-slate-50 border border-zinc-400 shadow-lg rounded-lg p-1 hover:scale-95 transition-transform duration-300">
-                    <a href="tNeptunianos.html">
+                    <span id="openModalNeptunianos">
                         <img src="img/Neptunianos.png" alt="tNeptunianos">
-                    </a>
+                    </span>
                 </div>
             </div>
             <!-- Segunda fila de cards -->
             <div class="flex flex-row w-full gap-4">
                 <div
                     class="w-1/2 bg-slate-50 border border-zinc-400 shadow-lg rounded-lg p-1 hover:scale-95 transition-transform duration-300">
-                    <a href="tSuperTerrestres.html">
+                    <span id="openModalSuperTerrestres">
                         <img src="img/SuperTerrestres.png" alt="tSuperTerrestres">
-                    </a>
+                    </span>
                 </div>
                 <div
                     class="w-1/2 bg-slate-50 border border-zinc-400 shadow-lg rounded-lg p-1 hover:scale-95 transition-transform duration-300">
-                    <a href="tTerrestres.html">
+                    <span id="openModalTerrestres">
                         <img src="img/Terrestres.png" alt="tTerrestres">
-                    </a>
+                    </span>
                 </div>
             </div>
         </div>
     </div>
+
     <div id="planetModal"
         class="flex flex-row fixed inset-0 z-50 hidden justify-center items-center bg-black bg-opacity-75 text-slate-200">
         <div class="rounded-lg shadow-lg p-6 max-w-2xl modal">
@@ -94,7 +100,9 @@
                             <h1>HD 189733b</h1>
                             <div class="">
                                 Distancia a la Tierra: 64 años luz.
-Características: Es conocido por sus intensas tormentas, con vientos de hasta 8,700 km/h. Tiene un color azul intenso debido a la presencia de silicato en su atmósfera, lo que probablemente crea lluvias de vidrio.
+                                Características: Es conocido por sus intensas tormentas, con vientos de hasta 8,700
+                                km/h. Tiene un color azul intenso debido a la presencia de silicato en su atmósfera, lo
+                                que probablemente crea lluvias de vidrio.
                             </div>
                         </div>
                         <img src="./img/Gaseosos/HD 189733b.png" alt="Planeta 1" class="w-full rounded-lg">
@@ -104,7 +112,8 @@ Características: Es conocido por sus intensas tormentas, con vientos de hasta 8
                             <h1>51 PEGASI B</h1>
                             <div class="">
                                 Distancia a la Tierra: 50 años luz.
-                                Características: Fue el primer exoplaneta descubierto orbitando una estrella de tipo solar. Se le considera el prototipo de los "Júpiteres calientes".
+                                Características: Fue el primer exoplaneta descubierto orbitando una estrella de tipo
+                                solar. Se le considera el prototipo de los "Júpiteres calientes".
                             </div>
                         </div>
                         <img src="./img/Gaseosos/51 Pegasi b.png" alt="Planeta 1" class="w-full rounded-lg">
@@ -114,7 +123,8 @@ Características: Es conocido por sus intensas tormentas, con vientos de hasta 8
                             <h1>KEPLER-7b (Osiris)</h1>
                             <div class="">
                                 Distancia a la Tierra: 150 años luz.
-                                Características: Uno de los primeros exoplanetas descubiertos que mostraba evidencia de la evaporación de su atmósfera debido a la intensa radiación de su estrella.
+                                Características: Uno de los primeros exoplanetas descubiertos que mostraba evidencia de
+                                la evaporación de su atmósfera debido a la intensa radiación de su estrella.
                             </div>
                         </div>
                         <img src="./img/Gaseosos/Kepler-7b.png" alt="Planeta 1" class="w-full rounded-lg">
@@ -124,7 +134,9 @@ Características: Es conocido por sus intensas tormentas, con vientos de hasta 8
                             <h1>WASP-12b</h1>
                             <div class="">
                                 Distancia a la Tierra: 870 años luz.
-                                Características: Es uno de los planetas más oscuros descubiertos. Absorbe el 94% de la luz que recibe y está siendo "devorado" lentamente por su estrella madre debido a su órbita extremadamente cercana.
+                                Características: Es uno de los planetas más oscuros descubiertos. Absorbe el 94% de la
+                                luz que recibe y está siendo "devorado" lentamente por su estrella madre debido a su
+                                órbita extremadamente cercana.
                             </div>
                         </div>
                         <img src="./img/Gaseosos/WASP-12b.png" alt="Planeta 1" class="w-full rounded-lg">
@@ -134,7 +146,9 @@ Características: Es conocido por sus intensas tormentas, con vientos de hasta 8
                             <h1>HD 209458b (Osiris)</h1>
                             <div class="">
                                 Distancia a la Tierra: 64 años luz.
-Características: Es conocido por sus intensas tormentas, con vientos de hasta 8,700 km/h. Tiene un color azul intenso debido a la presencia de silicato en su atmósfera, lo que probablemente crea lluvias de vidrio.
+                                Características: Es conocido por sus intensas tormentas, con vientos de hasta 8,700
+                                km/h. Tiene un color azul intenso debido a la presencia de silicato en su atmósfera, lo
+                                que probablemente crea lluvias de vidrio.
                             </div>
                         </div>
                         <img src="./img/Gaseosos/HD 209458b (Osiris).png" alt="Planeta 1" class="w-full rounded-lg">
@@ -150,6 +164,253 @@ Características: Es conocido por sus intensas tormentas, con vientos de hasta 8
             </div>
         </div>
     </div>
+
+    <!-- Modal de Neptunianos -->
+    <div id="planetModalNeptunianos"
+        class="flex flex-row fixed inset-0 z-50 hidden justify-center items-center bg-black bg-opacity-75 text-slate-200">
+        <div class="rounded-lg shadow-lg p-6 max-w-2xl modal">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-bold color-white">Neptunianos</h2>
+                <button id="closeModalNeptunianos" class="text-gray-600 hover:text-gray-900">&times;</button>
+            </div>
+            <div id="carouselNeptunianos" class="relative">
+                <div class="carousel-images gap-4">
+                    <!-- Contenido del carrusel aquí -->
+                    <div class="carousel-item  grid grid-cols-2">
+                        <div>
+                            <h1>HD 189733b</h1>
+                            <div class="">
+                                Distancia a la Tierra: 64 años luz.
+                                Características: Es conocido por sus intensas tormentas, con vientos de hasta 8,700
+                                km/h. Tiene un color azul intenso debido a la presencia de silicato en su atmósfera, lo
+                                que probablemente crea lluvias de vidrio.
+                            </div>
+                        </div>
+                        <img src="./img/Gaseosos/HD 189733b.png" alt="Planeta 1" class="w-full rounded-lg">
+                    </div>
+                    <div class="carousel-item hidden grid grid-cols-2">
+                        <div>
+                            <h1>51 PEGASI B</h1>
+                            <div class="">
+                                Distancia a la Tierra: 50 años luz.
+                                Características: Fue el primer exoplaneta descubierto orbitando una estrella de tipo
+                                solar. Se le considera el prototipo de los "Júpiteres calientes".
+                            </div>
+                        </div>
+                        <img src="./img/Gaseosos/51 Pegasi b.png" alt="Planeta 1" class="w-full rounded-lg">
+                    </div>
+                    <div class="carousel-item hidden grid grid-cols-2">
+                        <div>
+                            <h1>KEPLER-7b (Osiris)</h1>
+                            <div class="">
+                                Distancia a la Tierra: 150 años luz.
+                                Características: Uno de los primeros exoplanetas descubiertos que mostraba evidencia de
+                                la evaporación de su atmósfera debido a la intensa radiación de su estrella.
+                            </div>
+                        </div>
+                        <img src="./img/Gaseosos/Kepler-7b.png" alt="Planeta 1" class="w-full rounded-lg">
+                    </div>
+                    <div class="carousel-item hidden grid grid-cols-2">
+                        <div>
+                            <h1>WASP-12b</h1>
+                            <div class="">
+                                Distancia a la Tierra: 870 años luz.
+                                Características: Es uno de los planetas más oscuros descubiertos. Absorbe el 94% de la
+                                luz que recibe y está siendo "devorado" lentamente por su estrella madre debido a su
+                                órbita extremadamente cercana.
+                            </div>
+                        </div>
+                        <img src="./img/Gaseosos/WASP-12b.png" alt="Planeta 1" class="w-full rounded-lg">
+                    </div>
+                    <div class="carousel-item hidden grid grid-cols-2">
+                        <div>
+                            <h1>HD 209458b (Osiris)</h1>
+                            <div class="">
+                                Distancia a la Tierra: 64 años luz.
+                                Características: Es conocido por sus intensas tormentas, con vientos de hasta 8,700
+                                km/h. Tiene un color azul intenso debido a la presencia de silicato en su atmósfera, lo
+                                que probablemente crea lluvias de vidrio.
+                            </div>
+                        </div>
+                        <img src="./img/Gaseosos/HD 209458b (Osiris).png" alt="Planeta 1" class="w-full rounded-lg">
+                    </div>
+                </div>
+                <button id="prevNeptunianos" class="absolute left-0 bottom-1 transform -translate-y-1/2 mr-5">
+                    <img src="./img/nave-espacial.png" alt="Anterior"
+                        class="w-10 h-10 transform scale-x-[-1] object-cover">
+                </button>
+                <button id="nextNeptunianos" class="absolute right-0 bottom-1 transform -translate-y-1/2 ml-5">
+                    <img src="./img/nave-espacial.png" alt="Siguiente" class="w-10 h-10">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de SuperTerrestres -->
+    <div id="superTerrestresModal"
+        class="flex flex-row fixed inset-0 z-50 hidden justify-center items-center bg-black bg-opacity-75 text-slate-200">
+        <div class="rounded-lg shadow-lg p-6 max-w-2xl modal">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-bold color-white">SuperTerrestres</h2>
+                <button id="closeSuperTerrestresModal" class="text-gray-600 hover:text-gray-900">&times;</button>
+            </div>
+            <div id="carouselSuperTerrestres" class="relative">
+                <div class="carousel-images gap-4">
+                    <!-- Contenido del carrusel aquí -->
+                    <div class="carousel-item grid grid-cols-2">
+                        <div>
+                            <h1>HD 189733b</h1>
+                            <div>
+                                Distancia a la Tierra: 64 años luz.
+                                Características: Es conocido por sus intensas tormentas, con vientos de hasta 8,700
+                                km/h. Tiene un color azul intenso debido a la presencia de silicato en su atmósfera, lo
+                                que probablemente crea lluvias de vidrio.
+                            </div>
+                        </div>
+                        <img src="./img/Gaseosos/HD 189733b.png" alt="Planeta 1" class="w-full rounded-lg">
+                    </div>
+                    <div class="carousel-item hidden grid grid-cols-2">
+                        <div>
+                            <h1>51 PEGASI B</h1>
+                            <div>
+                                Distancia a la Tierra: 50 años luz.
+                                Características: Fue el primer exoplaneta descubierto orbitando una estrella de tipo
+                                solar. Se le considera el prototipo de los "Júpiteres calientes".
+                            </div>
+                        </div>
+                        <img src="./img/Gaseosos/51 Pegasi b.png" alt="Planeta 2" class="w-full rounded-lg">
+                    </div>
+                    <div class="carousel-item hidden grid grid-cols-2">
+                        <div>
+                            <h1>KEPLER-7b (Osiris)</h1>
+                            <div>
+                                Distancia a la Tierra: 150 años luz.
+                                Características: Uno de los primeros exoplanetas descubiertos que mostraba evidencia de
+                                la evaporación de su atmósfera debido a la intensa radiación de su estrella.
+                            </div>
+                        </div>
+                        <img src="./img/Gaseosos/Kepler-7b.png" alt="Planeta 3" class="w-full rounded-lg">
+                    </div>
+                    <div class="carousel-item hidden grid grid-cols-2">
+                        <div>
+                            <h1>WASP-12b</h1>
+                            <div>
+                                Distancia a la Tierra: 870 años luz.
+                                Características: Es uno de los planetas más oscuros descubiertos. Absorbe el 94% de la
+                                luz que recibe y está siendo "devorado" lentamente por su estrella madre debido a su
+                                órbita extremadamente cercana.
+                            </div>
+                        </div>
+                        <img src="./img/Gaseosos/WASP-12b.png" alt="Planeta 4" class="w-full rounded-lg">
+                    </div>
+                    <div class="carousel-item hidden grid grid-cols-2">
+                        <div>
+                            <h1>HD 209458b (Osiris)</h1>
+                            <div>
+                                Distancia a la Tierra: 64 años luz.
+                                Características: Es conocido por sus intensas tormentas, con vientos de hasta 8,700
+                                km/h. Tiene un color azul intenso debido a la presencia de silicato en su atmósfera, lo
+                                que probablemente crea lluvias de vidrio.
+                            </div>
+                        </div>
+                        <img src="./img/Gaseosos/HD 209458b (Osiris).png" alt="Planeta 5" class="w-full rounded-lg">
+                    </div>
+                </div>
+                <button id="prevSuperTerrestres" class="absolute left-0 bottom-1 transform -translate-y-1/2 mr-5">
+                    <img src="./img/nave-espacial.png" alt="Anterior"
+                        class="w-10 h-10 transform scale-x-[-1] object-cover">
+                </button>
+                <button id="nextSuperTerrestres" class="absolute right-0 bottom-1 transform -translate-y-1/2 ml-5">
+                    <img src="./img/nave-espacial.png" alt="Siguiente" class="w-10 h-10">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Terrestres -->
+    <div id="planetModalTerrestres"
+        class="flex flex-row fixed inset-0 z-50 hidden justify-center items-center bg-black bg-opacity-75 text-slate-200">
+        <div class="rounded-lg shadow-lg p-6 max-w-2xl modal">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-bold color-white">Terrestres</h2>
+                <button id="closeModalTerrestres" class="text-gray-600 hover:text-gray-900">&times;</button>
+            </div>
+            <div id="carouselTerrestres" class="relative">
+                <div class="carousel-images gap-4">
+                    <!-- Contenido del carrusel aquí -->
+                    <div class="carousel-item grid grid-cols-2">
+                        <div>
+                            <h1>HD 189733b</h1>
+                            <div class="">
+                                Distancia a la Tierra: 64 años luz.
+                                Características: Es conocido por sus intensas tormentas, con vientos de hasta 8,700
+                                km/h. Tiene un color azul intenso debido a la presencia de silicato en su atmósfera, lo
+                                que probablemente crea lluvias de vidrio.
+                            </div>
+                        </div>
+                        <img src="./img/Gaseosos/HD 189733b.png" alt="Planeta 1" class="w-full rounded-lg">
+                    </div>
+                    <div class="carousel-item hidden grid grid-cols-2">
+                        <div>
+                            <h1>51 PEGASI B</h1>
+                            <div class="">
+                                Distancia a la Tierra: 50 años luz.
+                                Características: Fue el primer exoplaneta descubierto orbitando una estrella de tipo
+                                solar. Se le considera el prototipo de los "Júpiteres calientes".
+                            </div>
+                        </div>
+                        <img src="./img/Gaseosos/51 Pegasi b.png" alt="Planeta 2" class="w-full rounded-lg">
+                    </div>
+                    <div class="carousel-item hidden grid grid-cols-2">
+                        <div>
+                            <h1>KEPLER-7b (Osiris)</h1>
+                            <div class="">
+                                Distancia a la Tierra: 150 años luz.
+                                Características: Uno de los primeros exoplanetas descubiertos que mostraba evidencia de
+                                la evaporación de su atmósfera debido a la intensa radiación de su estrella.
+                            </div>
+                        </div>
+                        <img src="./img/Gaseosos/Kepler-7b.png" alt="Planeta 3" class="w-full rounded-lg">
+                    </div>
+                    <div class="carousel-item hidden grid grid-cols-2">
+                        <div>
+                            <h1>WASP-12b</h1>
+                            <div class="">
+                                Distancia a la Tierra: 870 años luz.
+                                Características: Es uno de los planetas más oscuros descubiertos. Absorbe el 94% de la
+                                luz que recibe y está siendo "devorado" lentamente por su estrella madre debido a su
+                                órbita extremadamente cercana.
+                            </div>
+                        </div>
+                        <img src="./img/Gaseosos/WASP-12b.png" alt="Planeta 4" class="w-full rounded-lg">
+                    </div>
+                    <div class="carousel-item hidden grid grid-cols-2">
+                        <div>
+                            <h1>HD 209458b (Osiris)</h1>
+                            <div class="">
+                                Distancia a la Tierra: 64 años luz.
+                                Características: Es conocido por sus intensas tormentas, con vientos de hasta 8,700
+                                km/h. Tiene un color azul intenso debido a la presencia de silicato en su atmósfera, lo
+                                que probablemente crea lluvias de vidrio.
+                            </div>
+                        </div>
+                        <img src="./img/Gaseosos/HD 209458b (Osiris).png" alt="Planeta 5" class="w-full rounded-lg">
+                    </div>
+                </div>
+                <button id="prevTerrestres" class="absolute left-0 bottom-1 transform -translate-y-1/2 mr-5">
+                    <img src="./img/nave-espacial.png" alt="Anterior"
+                        class="w-10 h-10 transform scale-x-[-1] object-cover">
+                </button>
+                <button id="nextTerrestres" class="absolute right-0 bottom-1 transform -translate-y-1/2 ml-5">
+                    <img src="./img/nave-espacial.png" alt="Siguiente" class="w-10 h-10">
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+
     <div class="ia-container" id="ia-active">
         <div class="ball ball1"></div>
         <div class="ball ball2"></div>
@@ -165,6 +426,7 @@ Características: Es conocido por sus intensas tormentas, con vientos de hasta 8
     </div>
 
     <br>
+    <script src="principal.js"></script>
 </body>
 
 <script>
@@ -202,6 +464,88 @@ Características: Es conocido por sus intensas tormentas, con vientos de hasta 8
         currentIndex = (currentIndex + 1) % carouselItems.length;
         carouselItems[currentIndex].classList.remove("hidden");
     });
+
+    // Lógica para el modal de Neptunianos
+    const openModalNeptunianos = document.getElementById("openModalNeptunianos");
+    const closeModalNeptunianos = document.getElementById("closeModalNeptunianos");
+    const modalNeptunianos = document.getElementById("planetModalNeptunianos");
+    const carouselItemsNeptunianos = document.querySelectorAll("#carouselNeptunianos .carousel-item");
+    let currentIndexNeptunianos = 0;
+
+    openModalNeptunianos.addEventListener("click", () => {
+        modalNeptunianos.classList.remove("hidden");
+    });
+
+    closeModalNeptunianos.addEventListener("click", () => {
+        modalNeptunianos.classList.add("hidden");
+    });
+
+    document.getElementById("prevNeptunianos").addEventListener("click", () => {
+        carouselItemsNeptunianos[currentIndexNeptunianos].classList.add("hidden");
+        currentIndexNeptunianos = (currentIndexNeptunianos - 1 + carouselItemsNeptunianos.length) % carouselItemsNeptunianos.length;
+        carouselItemsNeptunianos[currentIndexNeptunianos].classList.remove("hidden");
+    });
+
+    document.getElementById("nextNeptunianos").addEventListener("click", () => {
+        carouselItemsNeptunianos[currentIndexNeptunianos].classList.add("hidden");
+        currentIndexNeptunianos = (currentIndexNeptunianos + 1) % carouselItemsNeptunianos.length;
+        carouselItemsNeptunianos[currentIndexNeptunianos].classList.remove("hidden");
+    });
+
+    // Lógica para el modal de SuperTerrestres
+    const openModalSuperTerrestres = document.getElementById("openModalSuperTerrestres");
+    const closeModalSuperTerrestres = document.getElementById("closeSuperTerrestresModal");
+    const modalSuperTerrestres = document.getElementById("superTerrestresModal");
+    const carouselItemsSuperTerrestres = document.querySelectorAll("#carouselSuperTerrestres .carousel-item");
+    let currentIndexSuperTerrestres = 0;
+
+    openModalSuperTerrestres.addEventListener("click", () => {
+        modalSuperTerrestres.classList.remove("hidden");
+    });
+
+    closeModalSuperTerrestres.addEventListener("click", () => {
+        modalSuperTerrestres.classList.add("hidden");
+    });
+
+    document.getElementById("prevSuperTerrestres").addEventListener("click", () => {
+        carouselItemsSuperTerrestres[currentIndexSuperTerrestres].classList.add("hidden");
+        currentIndexSuperTerrestres = (currentIndexSuperTerrestres - 1 + carouselItemsSuperTerrestres.length) % carouselItemsSuperTerrestres.length;
+        carouselItemsSuperTerrestres[currentIndexSuperTerrestres].classList.remove("hidden");
+    });
+
+    document.getElementById("nextSuperTerrestres").addEventListener("click", () => {
+        carouselItemsSuperTerrestres[currentIndexSuperTerrestres].classList.add("hidden");
+        currentIndexSuperTerrestres = (currentIndexSuperTerrestres + 1) % carouselItemsSuperTerrestres.length;
+        carouselItemsSuperTerrestres[currentIndexSuperTerrestres].classList.remove("hidden");
+    });
+
+    // Lógica para el modal de Terrestres
+    const openModalTerrestres = document.getElementById("openModalTerrestres");
+    const closeModalTerrestres = document.getElementById("closeModalTerrestres");
+    const modalTerrestres = document.getElementById("planetModalTerrestres");
+    const carouselItemsTerrestres = document.querySelectorAll("#carouselTerrestres .carousel-item");
+    let currentIndexTerrestres = 0;
+
+    openModalTerrestres.addEventListener("click", () => {
+        modalTerrestres.classList.remove("hidden");
+    });
+
+    closeModalTerrestres.addEventListener("click", () => {
+        modalTerrestres.classList.add("hidden");
+    });
+
+    document.getElementById("prevTerrestres").addEventListener("click", () => {
+        carouselItemsTerrestres[currentIndexTerrestres].classList.add("hidden");
+        currentIndexTerrestres = (currentIndexTerrestres - 1 + carouselItemsTerrestres.length) % carouselItemsTerrestres.length;
+        carouselItemsTerrestres[currentIndexTerrestres].classList.remove("hidden");
+    });
+
+    document.getElementById("nextTerrestres").addEventListener("click", () => {
+        carouselItemsTerrestres[currentIndexTerrestres].classList.add("hidden");
+        currentIndexTerrestres = (currentIndexTerrestres + 1) % carouselItemsTerrestres.length;
+        carouselItemsTerrestres[currentIndexTerrestres].classList.remove("hidden");
+    });
+
 </script>
 
 </html>
