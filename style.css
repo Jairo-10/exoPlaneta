@@ -38,7 +38,7 @@ body {
     align-items: center;
     max-width: 80%; /* Ajuste de ancho máximo reducido */
     padding: 10px; /* Ajuste de padding */
-    background-color: rgba(211, 157, 157, 0.9); /* Fondo semi-transparente para que se vea la imagen */
+    background-color: rgba(104, 99, 99, 0.9); /* Fondo semi-transparente para que se vea la imagen */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(198, 91, 91, 0.158);
     z-index: 2; /* Asegura que el contenedor del libro esté por encima de la imagen */
@@ -110,7 +110,7 @@ body {
 
 .page {
     background-color: rgb(253, 232, 164);
-    border: 2px solid #db6d6d;
+    border: 2px solid #000000;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     width: auto; /* Mantiene el 90% del ancho del contenedor */
     height: auto;
