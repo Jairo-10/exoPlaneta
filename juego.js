@@ -71,7 +71,7 @@ function reiniciarJuego() {
 
 // Función para salir
 function salir() {
-    window.location.href = "principal.html"; // Cambia esto por la URL de tu página inicial
+    window.location.href = "index.html"; // Cambia esto por la URL de tu página inicial
 }
 
 function bloquearTarjetas(){
