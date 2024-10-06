@@ -27,23 +27,64 @@ body {
     animation: fadeIn 1.5s ease-in-out; /* Animación suave al cargar la imagen */
 }
 
-/* Contenedor de los botones */
+/* Contenedor del libro centrado sobre la imagen de portada */
+.book-container {
+    position: absolute; /* Permite que el contenedor del libro se posicione sobre la imagen */
+    top: 45%; /* Coloca el contenedor en el centro verticalmente */
+    left: 50%; /* Coloca el contenedor en el centro horizontalmente */
+    transform: translate(-50%, -50%); /* Centra el contenedor completamente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 5000px; /* Ajuste de ancho máximo reducido */
+    padding: 5px; /* Ajuste de padding */
+    background-color: rgba(211, 157, 157, 0.9); /* Fondo semi-transparente para que se vea la imagen */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(198, 91, 91, 0.158);
+    z-index: 2; /* Asegura que el contenedor del libro esté por encima de la imagen */
+}
+
+.buttons {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Estilo de los botones en el contenedor del libro */
+.buttons button {
+    padding: 10px 15px; /* Ajuste de padding */
+    font-size: 14px; /* Tamaño de fuente reducido */
+    margin: 5px;
+    cursor: pointer;
+    font-family: 'Verdana', sans-serif; /* Cambié la fuente a Verdana */
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: #555;
+}
+
+/* Contenedor de los botones en la parte inferior */
 .botones-container {
-    position: absolute;
-    bottom: 20px; /* Coloca los botones en la parte inferior */
+    position: absolute; /* Posicionar en relación a la imagen */
+    bottom: 20px; /* Espacio desde la parte inferior */
     left: 50%;
     transform: translateX(-50%); /* Centra los botones horizontalmente */
     display: flex;
     gap: 20px; /* Espacio entre los botones */
+    z-index: 2; /* Asegura que los botones estén por encima de la imagen */
 }
 
 /* Estilos para los botones */
 .boton {
     background-color: #1b61a3;
     color: rgb(255, 255, 255);
-    padding: 10px 20px;
+    padding: 8px 16px; /* Ajuste de padding */
     text-decoration: none;
-    font-size: 16px;
+    font-size: 13px; /* Tamaño de fuente reducido */
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
@@ -52,3 +93,28 @@ body {
     background-color: #080547; /* Efecto al pasar el ratón sobre el botón */
 }
 
+.book-title {
+    font-size: 2.2rem; /* Tamaño reducido */
+    line-height: 1.2; /* Ajusta la altura de la línea según sea necesario */
+    text-align: center; /* Centra el texto si lo deseas */
+    margin: 10px 0; /* Margen superior e inferior */
+    color: #100b6f; /* Letras amarillas */
+}
+
+/* Asegura que el libro ocupe el 100% del contenedor en pantallas pequeñas */
+#flipbook {
+    width: 100%;
+    height: auto;
+    overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+.page {
+    background-color: rgb(253, 232, 164);
+    border: 2px solid #db6d6d;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: auto; /* Mantiene el 90% del ancho del contenedor */
+    height: auto;
+    padding: 10px 15px; /* Ajuste de padding */
+    line-height: 1.6; /* Ajustar espacio entre líneas */
+    transition: transform 0.3s ease; /* Añadir transición suave */
+}
