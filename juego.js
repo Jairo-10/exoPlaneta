@@ -74,6 +74,7 @@ function salir() {
     window.location.href = "index.html"; // Cambia esto por la URL de tu página inicial
 }
 
+//Funcion para bloquear tarjeta
 function bloquearTarjetas(){
     for(let i = 0; i<= 15; i++){
         let tarjetaBloqueada = document.getElementById(i);
