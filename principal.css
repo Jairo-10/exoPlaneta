@@ -6,7 +6,8 @@
 }
 
 html, body {
-    height: 100%; /* Asegúrate de que el html y el body ocupen toda la altura */
+    height: 100%;
+    /* Asegúrate de que el html y el body ocupen toda la altura */
 }
 
 body {
@@ -16,15 +17,21 @@ body {
 }
 
 .imagen-portada-container {
-    position: relative; /* Permite que los elementos hijos se posicionen relativos a este contenedor */
+    position: relative;
+    /* Permite que los elementos hijos se posicionen relativos a este contenedor */
 }
 
 .imagen-portada {
-    width: 100%; /* Ocupa el 100% del ancho del contenedor principal */
-    max-height: 100vh; /* Limitar la altura de la imagen a la altura del viewport */
-    object-fit: cover; /* Asegura que la imagen no se distorsione */
-    display: block; /* Mostrar como un bloque */
-    animation: fadeIn 1.5s ease-in-out; /* Animación suave al cargar la imagen */
+    width: 100%;
+    /* Ocupa el 100% del ancho del contenedor principal */
+    max-height: 100vh;
+    /* Limitar la altura de la imagen a la altura del viewport */
+    object-fit: cover;
+    /* Asegura que la imagen no se distorsione */
+    display: block;
+    /* Mostrar como un bloque */
+    animation: fadeIn 1.5s ease-in-out;
+    /* Animación suave al cargar la imagen */
 }
 
 /* Animación para la imagen */
@@ -32,25 +39,36 @@ body {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
 }
 
 .simulador-container {
-    width: 90%; /* Ajusta el ancho del contenedor del iframe */
-    max-width: 8000px; /* Ancho máximo del contenedor */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
-    background-color: white; /* Fondo blanco para el contenedor */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para un efecto de profundidad */
-    overflow: hidden; /* Esconde el contenido que sobresalga */
+    width: 90%;
+    /* Ajusta el ancho del contenedor del iframe */
+    max-width: 8000px;
+    /* Ancho máximo del contenedor */
+    margin: 0 auto;
+    /* Centra el contenedor horizontalmente */
+    background-color: white;
+    /* Fondo blanco para el contenedor */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil para un efecto de profundidad */
+    overflow: hidden;
+    /* Esconde el contenido que sobresalga */
 }
 
 .simulador-container iframe {
-    width: 100%; /* Ocupa el 100% del contenedor */
-    height: 600px; /* Altura del iframe */
-    border: none; /* Sin borde alrededor del iframe */
+    width: 100%;
+    /* Ocupa el 100% del contenedor */
+    height: 600px;
+    /* Altura del iframe */
+    border: none;
+    /* Sin borde alrededor del iframe */
 }
 
 
@@ -59,16 +77,21 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 70px; /* Tamaño del contenedor */
+    width: 70px;
+    /* Tamaño del contenedor */
     height: 70px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1)); /* Fondo negro */
-    border-radius: 50%; /* Convertir en esfera */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6), /* Sombra interna */
-                0 0 50px rgba(255, 255, 255, 0.2); /* Brillo exterior */
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
+    /* Fondo negro */
+    border-radius: 50%;
+    /* Convertir en esfera */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6),
+        /* Sombra interna */
+        0 0 50px rgba(255, 255, 255, 0.2);
+    /* Brillo exterior */
     transition: all 0.3s ease;
 }
 
@@ -80,29 +103,38 @@ body {
 
 /* Efecto de luces superpuestas dentro de la esfera */
 .ball {
-    width: 30px; /* Aumentar el tamaño para mayor difusión */
+    width: 30px;
+    /* Aumentar el tamaño para mayor difusión */
     height: 30px;
     border-radius: 50%;
     position: absolute;
-    opacity: 1; /* Baja opacidad para efecto de luz */
-    filter: blur(5px); /* Difuminar con filtro de desenfoque */
-    box-shadow: 0 0 50px rgba(255, 255, 255, 0.5); /* Efecto de luz difuminada */
+    opacity: 1;
+    /* Baja opacidad para efecto de luz */
+    filter: blur(5px);
+    /* Difuminar con filtro de desenfoque */
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
+    /* Efecto de luz difuminada */
     transition: transform 1s ease;
 }
 
 /* Planetas superpuestos en el mismo lugar */
 .ball1 {
-    background: radial-gradient(circle at 30% 30%, #ff6347, #8b0000); /* Planeta rojizo */
+    background: radial-gradient(circle at 30% 30%, #ff6347, #8b0000);
+    /* Planeta rojizo */
 }
 
 .ball2 {
-    background: radial-gradient(circle at 50% 50%, #1e90ff, #00008b); /* Planeta azul */
-    transform: translate(10px, 10px); /* Ligeramente desplazado */
+    background: radial-gradient(circle at 50% 50%, #1e90ff, #00008b);
+    /* Planeta azul */
+    transform: translate(10px, 10px);
+    /* Ligeramente desplazado */
 }
 
 .ball3 {
-    background: radial-gradient(circle at 50% 50%, #32cd32, #006400); /* Planeta verde */
-    transform: translate(-10px, -10px); /* Ligeramente desplazado */
+    background: radial-gradient(circle at 50% 50%, #32cd32, #006400);
+    /* Planeta verde */
+    transform: translate(-10px, -10px);
+    /* Ligeramente desplazado */
 }
 
 /* Efecto de vibración al hacer clic (simula que está hablando) */
@@ -110,15 +142,19 @@ body {
     0% {
         transform: translate(0, 0);
     }
+
     25% {
         transform: translate(2px, -2px);
     }
+
     50% {
         transform: translate(-2px, 2px);
     }
+
     75% {
         transform: translate(2px, 2px);
     }
+
     100% {
         transform: translate(0, 0);
     }
@@ -128,15 +164,19 @@ body {
     0% {
         transform: translate(10, 10);
     }
+
     25% {
         transform: translate(2px, -2px);
     }
+
     50% {
         transform: translate(-2px, 2px);
     }
+
     75% {
         transform: translate(2px, 2px);
     }
+
     100% {
         transform: translate(10, 10);
     }
@@ -146,19 +186,24 @@ body {
     0% {
         transform: translate(-10, -10);
     }
+
     25% {
         transform: translate(2px, -2px);
     }
+
     50% {
         transform: translate(-2px, 2px);
     }
+
     75% {
         transform: translate(2px, 2px);
     }
+
     100% {
         transform: translate(-10, -10);
     }
 }
+
 /* Cuando se activa, las bolas comienzan a vibrar */
 /* .active .ball {
     animation: vibrate 0.5s infinite;
@@ -169,13 +214,14 @@ body {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
 }
 
 .active .ball1 {
-    transition: transform 0.3s ;
+    transition: transform 0.3s;
     animation: vibrate 0.5s infinite;
 }
 

@@ -1,28 +1,28 @@
-body{
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 18%, rgba(0,212,255,1) 100%);
+body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 18%, rgba(0, 212, 255, 1) 100%);
     font-family: sans-serif;
     color: white;
 }
 
-main{
+main {
     width: 730px;
     margin: 100px auto 50px;
     display: flex;
     align-items: center;
 }
 
-.section1{
+.section1 {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 0 10px 10px 10px;
     border-radius: 8px;
 }
 
-h1{
+h1 {
     text-align: center;
 }
 
-button{
+button {
     height: 100px;
     width: 100px;
     font-size: 40px;
@@ -30,11 +30,11 @@ button{
     font-weight: bold;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
 }
 
-.section2{
+.section2 {
     background-color: rgba(255, 255, 255, 0.2);
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -43,7 +43,7 @@ button:hover{
     padding: 0 20px;
 }
 
-.estadisticas{
+.estadisticas {
     border: 1px solid white;
     height: 105px;
     border-radius: 8px;
@@ -52,29 +52,42 @@ button:hover{
 }
 
 .botones-container {
-    display: flex; /* Usar flexbox */
-    justify-content: center; /* Centrar los botones */
-    margin-top: 10px; /* Espacio superior */
+    display: flex;
+    /* Usar flexbox */
+    justify-content: center;
+    /* Centrar los botones */
+    margin-top: 10px;
+    /* Espacio superior */
 }
 
 button#reiniciar, button#salir {
-    width: 45%; /* Ancho de los botones */
-    height: 50px; /* Ajustar la altura */
-    padding: 0; /* Eliminar padding para controlar mejor la altura */
+    width: 45%;
+    /* Ancho de los botones */
+    height: 50px;
+    /* Ajustar la altura */
+    padding: 0;
+    /* Eliminar padding para controlar mejor la altura */
     font-size: 18px;
-    margin: 0 5px; /* Espacio horizontal entre botones */
+    margin: 0 5px;
+    /* Espacio horizontal entre botones */
     color: white;
-    background-color: rgba(9, 9, 121, 0.8); /* Color de fondo */
-    border: none; /* Sin borde */
-    border-radius: 8px; /* Bordes redondeados */
-    transition: background-color 0.3s ease; /* Transición suave */
+    background-color: rgba(9, 9, 121, 0.8);
+    /* Color de fondo */
+    border: none;
+    /* Sin borde */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    transition: background-color 0.3s ease;
+    /* Transición suave */
 }
 
 button#reiniciar:hover, button#salir:hover {
-    background-color: rgba(0, 212, 255, 0.8); /* Color de fondo al pasar el mouse */
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    background-color: rgba(0, 212, 255, 0.8);
+    /* Color de fondo al pasar el mouse */
+    cursor: pointer;
+    /* Cambia el cursor al pasar el mouse */
 }
 
-img{
+img {
     width: 110%;
 }

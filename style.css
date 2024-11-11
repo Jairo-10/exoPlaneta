@@ -4,8 +4,10 @@
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%; /* Asegúrate de que el html y el body ocupen toda la altura */
+html,
+body {
+    height: 100%;
+    /* Asegúrate de que el html y el body ocupen toda la altura */
 }
 
 body {
@@ -16,32 +18,46 @@ body {
 }
 
 .imagen-portada-container {
-    position: relative; /* Permite que los elementos hijos se posicionen relativos a este contenedor */
+    position: relative;
+    /* Permite que los elementos hijos se posicionen relativos a este contenedor */
 }
 
 .imagen-portada {
-    width: 100%; /* Ocupa el 100% del ancho del contenedor principal */
-    max-height: 100vh; /* Limitar la altura de la imagen a la altura del viewport */
-    object-fit: cover; /* Asegura que la imagen no se distorsione */
-    display: block; /* Mostrar como un bloque */
-    animation: fadeIn 1.5s ease-in-out; /* Animación suave al cargar la imagen */
+    width: 100%;
+    /* Ocupa el 100% del ancho del contenedor principal */
+    max-height: 100vh;
+    /* Limitar la altura de la imagen a la altura del viewport */
+    object-fit: cover;
+    /* Asegura que la imagen no se distorsione */
+    display: block;
+    /* Mostrar como un bloque */
+    animation: fadeIn 1.5s ease-in-out;
+    /* Animación suave al cargar la imagen */
 }
 
 /* Contenedor del libro centrado sobre la imagen de portada */
 .book-container {
-    position: absolute; /* Permite que el contenedor del libro se posicione sobre la imagen */
-    top: 45%; /* Coloca el contenedor en el centro verticalmente */
-    left: 50%; /* Coloca el contenedor en el centro horizontalmente */
-    transform: translate(-50%, -50%); /* Centra el contenedor completamente */
+    position: absolute;
+    /* Permite que el contenedor del libro se posicione sobre la imagen */
+    top: 45%;
+    /* Coloca el contenedor en el centro verticalmente */
+    left: 50%;
+    /* Coloca el contenedor en el centro horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Centra el contenedor completamente */
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 80%; /* Ajuste de ancho máximo reducido */
-    padding: 10px; /* Ajuste de padding */
-    background-color: rgba(104, 99, 99, 0.9); /* Fondo semi-transparente para que se vea la imagen */
+    max-width: 80%;
+    /* Ajuste de ancho máximo reducido */
+    padding: 10px;
+    /* Ajuste de padding */
+    background-color: rgba(104, 99, 99, 0.9);
+    /* Fondo semi-transparente para que se vea la imagen */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(198, 91, 91, 0.158);
-    z-index: 2; /* Asegura que el contenedor del libro esté por encima de la imagen */
+    z-index: 2;
+    /* Asegura que el contenedor del libro esté por encima de la imagen */
 }
 
 .buttons {
@@ -51,11 +67,14 @@ body {
 
 /* Estilo de los botones en el contenedor del libro */
 .buttons button {
-    padding: 10px 15px; /* Ajuste de padding */
-    font-size: 14px; /* Tamaño de fuente reducido */
+    padding: 10px 15px;
+    /* Ajuste de padding */
+    font-size: 14px;
+    /* Tamaño de fuente reducido */
     margin: 5px;
     cursor: pointer;
-    font-family: 'Verdana', sans-serif; /* Cambié la fuente a Verdana */
+    font-family: 'Verdana', sans-serif;
+    /* Cambié la fuente a Verdana */
     background-color: #333;
     color: #fff;
     border: none;
@@ -69,54 +88,72 @@ body {
 
 /* Contenedor de los botones en la parte inferior */
 .botones-container {
-    position: absolute; /* Posicionar en relación a la imagen */
-    bottom: 20px; /* Espacio desde la parte inferior */
+    position: absolute;
+    /* Posicionar en relación a la imagen */
+    bottom: 20px;
+    /* Espacio desde la parte inferior */
     left: 50%;
-    transform: translateX(-50%); /* Centra los botones horizontalmente */
+    transform: translateX(-50%);
+    /* Centra los botones horizontalmente */
     display: flex;
-    gap: 20px; /* Espacio entre los botones */
-    z-index: 2; /* Asegura que los botones estén por encima de la imagen */
+    gap: 20px;
+    /* Espacio entre los botones */
+    z-index: 2;
+    /* Asegura que los botones estén por encima de la imagen */
 }
 
 /* Estilos para los botones */
 .boton {
     background-color: #1b61a3;
     color: rgb(255, 255, 255);
-    padding: 8px 16px; /* Ajuste de padding */
+    padding: 8px 16px;
+    /* Ajuste de padding */
     text-decoration: none;
-    font-size: 13px; /* Tamaño de fuente reducido */
+    font-size: 13px;
+    /* Tamaño de fuente reducido */
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 .boton:hover {
-    background-color: #080547; /* Efecto al pasar el ratón sobre el botón */
+    background-color: #080547;
+    /* Efecto al pasar el ratón sobre el botón */
 }
 
 .book-title {
-    font-size: 1.8rem; /* Tamaño reducido */
-    line-height: 1.2; /* Ajusta la altura de la línea según sea necesario */
-    text-align: center; /* Centra el texto si lo deseas */
-    margin: 10px 0; /* Margen superior e inferior */
-    color: #100b6f; /* Letras amarillas */
+    font-size: 1.8rem;
+    /* Tamaño reducido */
+    line-height: 1.2;
+    /* Ajusta la altura de la línea según sea necesario */
+    text-align: center;
+    /* Centra el texto si lo deseas */
+    margin: 10px 0;
+    /* Margen superior e inferior */
+    color: #100b6f;
+    /* Letras amarillas */
 }
 
 /* Asegura que el libro ocupe el 100% del contenedor en pantallas pequeñas */
 #flipbook {
     width: 100%;
     height: auto;
-    overflow: hidden; /* Evita que el contenido se desborde */
+    overflow: hidden;
+    /* Evita que el contenido se desborde */
 }
 
 .page {
     background-color: rgb(253, 232, 164);
     border: 2px solid #000000;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    width: auto; /* Mantiene el 90% del ancho del contenedor */
+    width: auto;
+    /* Mantiene el 90% del ancho del contenedor */
     height: auto;
-    padding: 10px 15px; /* Ajuste de padding */
-    line-height: 1.6; /* Ajustar espacio entre líneas */
-    transition: transform 0.3s ease; /* Añadir transición suave */
+    padding: 10px 15px;
+    /* Ajuste de padding */
+    line-height: 1.6;
+    /* Ajustar espacio entre líneas */
+    transition: transform 0.3s ease;
+    /* Añadir transición suave */
 }
 
 @media (max-width: 768px) {
@@ -125,20 +162,24 @@ body {
         max-width: 90%;
         padding: 10px;
     }
-    
+
     .book-title {
-        font-size: 1.5rem; /* Reducir tamaño de título en móviles */
+        font-size: 1.5rem;
+        /* Reducir tamaño de título en móviles */
     }
 
     .buttons button {
-        
-        padding: 8px 15px; /* Ajustar padding para pantallas pequeñas */
-        font-size: 12px; /* Reducir tamaño de fuente */
+
+        padding: 8px 15px;
+        /* Ajustar padding para pantallas pequeñas */
+        font-size: 12px;
+        /* Reducir tamaño de fuente */
     }
 
     .boton {
         padding: 6px 10px;
-        font-size: 10px; /* Reducir tamaño de los botones */
+        font-size: 10px;
+        /* Reducir tamaño de los botones */
     }
 
     #flipbook {
@@ -146,18 +187,24 @@ body {
     }
 
     .page {
-        padding: 10px 15px; /* Menos padding para dispositivos móviles */
-        font-size: 0.6rem; /* Fuente más pequeña para pantallas pequeñas */
+        padding: 10px 15px;
+        /* Menos padding para dispositivos móviles */
+        font-size: 0.6rem;
+        /* Fuente más pequeña para pantallas pequeñas */
     }
+
     .botones-container {
-        bottom: -200px; /* Baja los botones un poco en pantallas medianas */
+        bottom: -200px;
+        /* Baja los botones un poco en pantallas medianas */
     }
 }
 
 @media (max-width: 480px) {
     .book-container {
-        top: 60%; /* Baja aún más el libro en pantallas muy pequeñas */
+        top: 60%;
+        /* Baja aún más el libro en pantallas muy pequeñas */
     }
+
     .book-title {
         font-size: 1rem;
     }
@@ -169,7 +216,9 @@ body {
     .boton {
         font-size: 10px;
     }
+
     .botones-container {
-        bottom: -150px; /* Baja los botones un poco en pantallas medianas */
+        bottom: -150px;
+        /* Baja los botones un poco en pantallas medianas */
     }
 }
